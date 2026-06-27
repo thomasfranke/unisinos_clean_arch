@@ -1,0 +1,13 @@
+"filename", "language", "Dart", "comment", "blank", "total"
+"/Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/data_objects/crypto_quote_dto.dart", "Dart", 0, 23, 20, 43
+"/Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/data_objects/preferences_dao.dart", "Dart", 0, 6, 2, 8
+"/Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/data_sources/crypto_quotes_datasource.dart", "Dart", 0, 4, 0, 4
+"/Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/data_sources/favorites_datasource.dart", "Dart", 0, 7, 0, 7
+"/Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/data_sources/kline_datasource.dart", "Dart", 0, 4, 0, 4
+"/Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/data_sources/preferences_datasource.dart", "Dart", 0, 6, 0, 6
+"/Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/repositories_impl/crypto_quotes_repository_impl.dart", "Dart", 0, 3, 0, 3
+"/Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/repositories_impl/favorites_repository_impl.dart", "Dart", 0, 4, 0, 4
+"/Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/repositories_impl/kline_repository_impl.dart", "Dart", 0, 3, 0, 3
+"/Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/repositories_impl/preferences_repository_impl.dart", "Dart", 0, 3, 0, 3
+"/Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/main.dart", "Dart", 0, 1, 0, 1
+"Total", "-", 0, 64, 22, 86

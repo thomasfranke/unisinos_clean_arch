@@ -1,0 +1,40 @@
+Date : 2026-05-18 01:29:01
+Directory : /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib
+Total : 11 files,  0 codes, 64 comments, 22 blanks, all 86 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Dart     |         11 |          0 |         64 |         22 |         86 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                   | files      | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                      |         11 |          0 |         64 |         22 |         86 |
+| . (Files)                                                                                                              |          1 |          0 |          1 |          0 |          1 |
+| data                                                                                                                   |         10 |          0 |         63 |         22 |         85 |
+| data/data_objects                                                                                                      |          2 |          0 |         29 |         22 |         51 |
+| data/data_sources                                                                                                      |          4 |          0 |         21 |          0 |         21 |
+| data/repositories_impl                                                                                                 |          4 |          0 |         13 |          0 |         13 |
++------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                                               | language | code       | comment    | blank      | total      |
++------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/data_objects/crypto_quote_dto.dart                   | Dart     |          0 |         23 |         20 |         43 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/data_objects/preferences_dao.dart                    | Dart     |          0 |          6 |          2 |          8 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/data_sources/crypto_quotes_datasource.dart           | Dart     |          0 |          4 |          0 |          4 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/data_sources/favorites_datasource.dart               | Dart     |          0 |          7 |          0 |          7 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/data_sources/kline_datasource.dart                   | Dart     |          0 |          4 |          0 |          4 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/data_sources/preferences_datasource.dart             | Dart     |          0 |          6 |          0 |          6 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/repositories_impl/crypto_quotes_repository_impl.dart | Dart     |          0 |          3 |          0 |          3 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/repositories_impl/favorites_repository_impl.dart     | Dart     |          0 |          4 |          0 |          4 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/repositories_impl/kline_repository_impl.dart         | Dart     |          0 |          3 |          0 |          3 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/repositories_impl/preferences_repository_impl.dart   | Dart     |          0 |          3 |          0 |          3 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/main.dart                                                 | Dart     |          0 |          1 |          0 |          1 |
+| Total                                                                                                                  |          |          0 |         64 |         22 |         86 |
++------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

@@ -1,0 +1,7 @@
+"filename", "language", "Dart", "comment", "blank", "total"
+"/Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/data_sources/crypto_quotes_datasource.dart", "Dart", -9, 2, -2, -9
+"/Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/repositories_impl/crypto_quotes_repository_impl.dart", "Dart", 6, 1, 0, 7
+"/Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/domain/entities/quote_result.dart", "Dart", 6, 9, 4, 19
+"/Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/domain/repositories/crypto_quotes_repository_interface.dart", "Dart", 1, 0, 0, 1
+"/Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/presentation/providers/crypto_quote/crypto_quote_notifier.dart", "Dart", 3, 1, 0, 4
+"Total", "-", 7, 13, 2, 22

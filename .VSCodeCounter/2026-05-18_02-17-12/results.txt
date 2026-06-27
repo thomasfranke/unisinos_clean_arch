@@ -1,0 +1,129 @@
+Date : 2026-05-18 02:17:12
+Directory : /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib
+Total : 65 files,  2590 codes, 566 comments, 506 blanks, all 3662 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Dart     |         62 |      2,401 |        566 |        506 |      3,473 |
+| JSON     |          3 |        189 |          0 |          0 |        189 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                                                                | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                                                                   |         65 |      2,590 |        566 |        506 |      3,662 |
+| . (Files)                                                                                                                           |          1 |        164 |          6 |         15 |        185 |
+| application                                                                                                                         |          9 |        100 |         49 |         39 |        188 |
+| application/favorites                                                                                                               |          2 |         22 |         10 |          8 |         40 |
+| application/preferences                                                                                                             |          5 |         60 |         28 |         23 |        111 |
+| application/quotes                                                                                                                  |          2 |         18 |         11 |          8 |         37 |
+| core                                                                                                                                |         10 |        433 |        161 |        107 |        701 |
+| core/l10n                                                                                                                           |          7 |        368 |        133 |         85 |        586 |
+| core/l10n (Files)                                                                                                                   |          3 |        189 |          0 |          0 |        189 |
+| core/l10n/generated                                                                                                                 |          4 |        179 |        133 |         85 |        397 |
+| core/routes                                                                                                                         |          1 |         19 |          3 |          5 |         27 |
+| core/theme                                                                                                                          |          2 |         46 |         25 |         17 |         88 |
+| data                                                                                                                                |         12 |        412 |        104 |         94 |        610 |
+| data/data_objects                                                                                                                   |          3 |        140 |         54 |         43 |        237 |
+| data/data_sources                                                                                                                   |          5 |        162 |         31 |         28 |        221 |
+| data/repositories_impl                                                                                                              |          4 |        110 |         19 |         23 |        152 |
+| domain                                                                                                                              |          9 |         96 |         60 |         42 |        198 |
+| domain/entities                                                                                                                     |          5 |         71 |         47 |         30 |        148 |
+| domain/repositories                                                                                                                 |          4 |         25 |         13 |         12 |         50 |
+| infrastructure                                                                                                                      |          7 |        272 |         40 |         46 |        358 |
+| infrastructure/api_client                                                                                                           |          5 |        131 |         22 |         25 |        178 |
+| infrastructure/api_client (Files)                                                                                                   |          2 |         19 |          8 |          6 |         33 |
+| infrastructure/api_client/dio                                                                                                       |          1 |         99 |          4 |         10 |        113 |
+| infrastructure/api_client/models                                                                                                    |          2 |         13 |         10 |          9 |         32 |
+| infrastructure/storage                                                                                                              |          2 |        141 |         18 |         21 |        180 |
+| infrastructure/storage (Files)                                                                                                      |          1 |         23 |         13 |          9 |         45 |
+| infrastructure/storage/shared_preferences                                                                                           |          1 |        118 |          5 |         12 |        135 |
+| presentation                                                                                                                        |         17 |      1,113 |        146 |        163 |      1,422 |
+| presentation/providers                                                                                                              |          8 |        249 |        108 |         73 |        430 |
+| presentation/providers/crypto_quote                                                                                                 |          2 |         47 |         22 |         16 |         85 |
+| presentation/providers/favorites                                                                                                    |          2 |         65 |         30 |         18 |        113 |
+| presentation/providers/klines                                                                                                       |          2 |         56 |         26 |         18 |        100 |
+| presentation/providers/preferences                                                                                                  |          2 |         81 |         30 |         21 |        132 |
+| presentation/screens                                                                                                                |          9 |        864 |         38 |         90 |        992 |
+| presentation/screens/detail                                                                                                         |          1 |        271 |          4 |         22 |        297 |
+| presentation/screens/home                                                                                                           |          7 |        473 |         32 |         54 |        559 |
+| presentation/screens/home (Files)                                                                                                   |          1 |         53 |          3 |          4 |         60 |
+| presentation/screens/home/tabs                                                                                                      |          2 |        115 |          8 |         17 |        140 |
+| presentation/screens/home/widgets                                                                                                   |          4 |        305 |         21 |         33 |        359 |
+| presentation/screens/preferences                                                                                                    |          1 |        120 |          2 |         14 |        136 |
++-------------------------------------------------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                                                            | language | code       | comment    | blank      | total      |
++-------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/application/favorites/get_favorites_usecase.dart                       | Dart     |          7 |          5 |          4 |         16 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/application/favorites/toggle_favorite_usecase.dart                     | Dart     |         15 |          5 |          4 |         24 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/application/preferences/get_preferences_usecase.dart                   | Dart     |          7 |          5 |          4 |         16 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/application/preferences/save_preferences_usecase.dart                  | Dart     |          8 |          5 |          4 |         17 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/application/preferences/update_darkmode_preferences_usecase.dart       | Dart     |         15 |          6 |          5 |         26 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/application/preferences/update_fontscale_usecase.dart                  | Dart     |         15 |          6 |          5 |         26 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/application/preferences/update_locale_usecase.dart                     | Dart     |         15 |          6 |          5 |         26 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/application/quotes/get_crypto_quotes_usecase.dart                      | Dart     |          7 |          5 |          4 |         16 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/application/quotes/get_klines_usecase.dart                             | Dart     |         11 |          6 |          4 |         21 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/core/l10n/app_en.arb                                                   | JSON     |         63 |          0 |          0 |         63 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/core/l10n/app_es.arb                                                   | JSON     |         63 |          0 |          0 |         63 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/core/l10n/app_pt.arb                                                   | JSON     |         63 |          0 |          0 |         63 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/core/l10n/generated/app_localizations.dart                             | Dart     |         74 |        124 |         31 |        229 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/core/l10n/generated/app_localizations_en.dart                          | Dart     |         35 |          3 |         18 |         56 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/core/l10n/generated/app_localizations_es.dart                          | Dart     |         35 |          3 |         18 |         56 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/core/l10n/generated/app_localizations_pt.dart                          | Dart     |         35 |          3 |         18 |         56 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/core/routes/auto_route.dart                                            | Dart     |         19 |          3 |          5 |         27 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/core/theme/app_colors.dart                                             | Dart     |         16 |         21 |         14 |         51 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/core/theme/app_theme.dart                                              | Dart     |         30 |          4 |          3 |         37 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/data_objects/crypto_quote_dto.dart                                | Dart     |         82 |         27 |         25 |        134 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/data_objects/kline_dto.dart                                       | Dart     |         41 |         18 |         12 |         71 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/data_objects/preferences_dao.dart                                 | Dart     |         17 |          9 |          6 |         32 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/data_sources/crypto_quotes_cache_datasource.dart                  | Dart     |         50 |          6 |          7 |         63 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/data_sources/crypto_quotes_datasource.dart                        | Dart     |         39 |          5 |          5 |         49 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/data_sources/favorites_datasource.dart                            | Dart     |         11 |          8 |          7 |         26 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/data_sources/kline_datasource.dart                                | Dart     |         33 |          5 |          4 |         42 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/data_sources/preferences_datasource.dart                          | Dart     |         29 |          7 |          5 |         41 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/repositories_impl/crypto_quotes_repository_impl.dart              | Dart     |         47 |          7 |          8 |         62 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/repositories_impl/favorites_repository_impl.dart                  | Dart     |         22 |          4 |          6 |         32 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/repositories_impl/kline_repository_impl.dart                      | Dart     |         21 |          4 |          4 |         29 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/data/repositories_impl/preferences_repository_impl.dart                | Dart     |         20 |          4 |          5 |         29 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/domain/entities/crypto_quote_entity.dart                               | Dart     |         20 |         13 |          9 |         42 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/domain/entities/favorite_entity.dart                                   | Dart     |          4 |          4 |          2 |         10 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/domain/entities/kline_entity.dart                                      | Dart     |         20 |         11 |          9 |         40 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/domain/entities/preferences_entity.dart                                | Dart     |         21 |         10 |          6 |         37 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/domain/entities/quote_result.dart                                      | Dart     |          6 |          9 |          4 |         19 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/domain/repositories/crypto_quotes_repository_interface.dart            | Dart     |          6 |          3 |          3 |         12 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/domain/repositories/favorites_repository_interface.dart                | Dart     |          6 |          4 |          4 |         14 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/domain/repositories/kline_repository_interface.dart                    | Dart     |          8 |          3 |          2 |         13 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/domain/repositories/preferences_repository_interface.dart              | Dart     |          5 |          3 |          3 |         11 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/infrastructure/api_client/api_client_constants.dart                    | Dart     |          5 |          4 |          3 |         12 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/infrastructure/api_client/api_client_interface.dart                    | Dart     |         14 |          4 |          3 |         21 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/infrastructure/api_client/dio/dio_impl.dart                            | Dart     |         99 |          4 |         10 |        113 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/infrastructure/api_client/models/api_route.dart                        | Dart     |          6 |          4 |          4 |         14 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/infrastructure/api_client/models/http_methods.dart                     | Dart     |          7 |          6 |          5 |         18 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/infrastructure/storage/shared_preferences/shared_preferences_impl.dart | Dart     |        118 |          5 |         12 |        135 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/infrastructure/storage/storage_interface.dart                          | Dart     |         23 |         13 |          9 |         45 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/main.dart                                                              | Dart     |        164 |          6 |         15 |        185 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/presentation/providers/crypto_quote/crypto_quote_notifier.dart         | Dart     |         28 |          6 |          7 |         41 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/presentation/providers/crypto_quote/crypto_quote_state.dart            | Dart     |         19 |         16 |          9 |         44 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/presentation/providers/favorites/favorites_notifier.dart               | Dart     |         47 |         12 |         10 |         69 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/presentation/providers/favorites/favorites_state.dart                  | Dart     |         18 |         18 |          8 |         44 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/presentation/providers/klines/kline_notifier.dart                      | Dart     |         38 |         11 |         10 |         59 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/presentation/providers/klines/kline_state.dart                         | Dart     |         18 |         15 |          8 |         41 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/presentation/providers/preferences/preferences_notifier.dart           | Dart     |         63 |         15 |         13 |         91 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/presentation/providers/preferences/preferences_state.dart              | Dart     |         18 |         15 |          8 |         41 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/presentation/screens/detail/detail_screen.dart                         | Dart     |        271 |          4 |         22 |        297 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/presentation/screens/home/home_screen.dart                             | Dart     |         53 |          3 |          4 |         60 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/presentation/screens/home/tabs/favorites_tab.dart                      | Dart     |         55 |          4 |          8 |         67 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/presentation/screens/home/tabs/quotes_tab.dart                         | Dart     |         60 |          4 |          9 |         73 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/presentation/screens/home/widgets/drawer_widget.dart                   | Dart     |         35 |          2 |          3 |         40 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/presentation/screens/home/widgets/kline_chart_widget.dart              | Dart     |        190 |          8 |         19 |        217 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/presentation/screens/home/widgets/quote_list.dart                      | Dart     |         19 |          5 |          5 |         29 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/presentation/screens/home/widgets/quote_list_tile.dart                 | Dart     |         61 |          6 |          6 |         73 |
+| /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib/presentation/screens/preferences/preferences_screen.dart               | Dart     |        120 |          2 |         14 |        136 |
+| Total                                                                                                                               |          |      2,590 |        566 |        506 |      3,662 |
++-------------------------------------------------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

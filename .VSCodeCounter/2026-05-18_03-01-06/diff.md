@@ -1,0 +1,29 @@
+# Diff Summary
+
+Date : 2026-05-18 03:01:06
+
+Directory /Users/thf/Work/Flutter_Apps/tcc/flutter_clean_arch_slim/lib
+
+Total : 5 files,  7 codes, 13 comments, 6 blanks, all 26 lines
+
+[Summary](results.md) / [Details](details.md) / Diff Summary / [Diff Details](diff-details.md)
+
+## Languages
+| language | files | code | comment | blank | total |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| Dart | 5 | 7 | 13 | 6 | 26 |
+
+## Directories
+| path | files | code | comment | blank | total |
+| :--- | ---: | ---: | ---: | ---: | ---: |
+| . | 5 | 7 | 13 | 6 | 26 |
+| presentation | 5 | 7 | 13 | 6 | 26 |
+| presentation/screens | 5 | 7 | 13 | 6 | 26 |
+| presentation/screens/home | 2 | 2 | 3 | 1 | 6 |
+| presentation/screens/home (Files) | 1 | -22 | 0 | -2 | -24 |
+| presentation/screens/home/widgets | 1 | 24 | 3 | 3 | 30 |
+| presentation/screens/preferences | 3 | 5 | 10 | 5 | 20 |
+| presentation/screens/preferences (Files) | 1 | -34 | 0 | -6 | -40 |
+| presentation/screens/preferences/widgets | 2 | 39 | 10 | 11 | 60 |
+
+[Summary](results.md) / [Details](details.md) / Diff Summary / [Diff Details](diff-details.md)
