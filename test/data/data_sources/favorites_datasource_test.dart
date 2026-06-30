@@ -64,9 +64,7 @@ void main() {
           key: any(named: 'key'),
           value: any(named: 'value'),
         ),
-      ).thenAnswer(
-        (_) async => const <String>['ETHUSDT'],
-      );
+      ).thenAnswer((_) async => const <String>['ETHUSDT']);
 
       final List<String> result = await datasource.removeFavorite('BTCUSDT');
 

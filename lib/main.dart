@@ -13,8 +13,8 @@ import 'package:flutter_clean_arch_riverpod/core/constants/app_config.dart';
 import 'package:flutter_clean_arch_riverpod/core/l10n/generated/app_localizations.dart';
 import 'package:flutter_clean_arch_riverpod/core/routes/auto_route.dart';
 import 'package:flutter_clean_arch_riverpod/core/theme/app_theme.dart';
-import 'package:flutter_clean_arch_riverpod/data/data_sources/crypto_quotes_cache_datasource.dart';
-import 'package:flutter_clean_arch_riverpod/data/data_sources/crypto_quotes_datasource.dart';
+import 'package:flutter_clean_arch_riverpod/data/data_sources/crypto_quotes_local_datasource.dart';
+import 'package:flutter_clean_arch_riverpod/data/data_sources/crypto_quotes_remote_datasource.dart';
 import 'package:flutter_clean_arch_riverpod/data/data_sources/favorites_datasource.dart';
 import 'package:flutter_clean_arch_riverpod/data/data_sources/kline_datasource.dart';
 import 'package:flutter_clean_arch_riverpod/data/data_sources/preferences_datasource.dart';
@@ -62,11 +62,10 @@ void main() async {
   final ApiClientDioImpl apiClient = ApiClientDioImpl(dio: dio);
 
   // -- Data Sources --
-  final CryptoQuoteDatasource cryptoQuotesDatasource = CryptoQuoteDatasource(
-    apiClient: apiClient,
-  );
-  final CryptoQuotesCacheDatasource cryptoQuotesCacheDatasource =
-      CryptoQuotesCacheDatasource(storage: storage);
+  final CryptoQuotesRemoteDatasource cryptoQuotesRemoteDatasource =
+      CryptoQuotesRemoteDatasource(apiClient: apiClient);
+  final CryptoQuotesLocalDatasource cryptoQuotesLocalDatasource =
+      CryptoQuotesLocalDatasource(storage: storage);
 
   final KlineDatasource klineDatasource = KlineDatasource(apiClient: apiClient);
   final FavoritesDatasource favoritesDatasource = FavoritesDatasource(
@@ -79,8 +78,8 @@ void main() async {
   // -- Repositories --
   final CryptoQuotesRepositoryImpl cryptoQuotesRepository =
       CryptoQuotesRepositoryImpl(
-        datasource: cryptoQuotesDatasource,
-        cacheDatasource: cryptoQuotesCacheDatasource,
+        remoteDatasource: cryptoQuotesRemoteDatasource,
+        localDatasource: cryptoQuotesLocalDatasource,
       );
   final KlineRepositoryImpl klineRepository = KlineRepositoryImpl(
     datasource: klineDatasource,

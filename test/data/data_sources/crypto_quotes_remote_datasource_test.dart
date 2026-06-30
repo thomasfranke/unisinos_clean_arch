@@ -1,5 +1,5 @@
 import 'package:flutter_clean_arch_riverpod/data/data_objects/crypto_quote_dto.dart';
-import 'package:flutter_clean_arch_riverpod/data/data_sources/crypto_quotes_datasource.dart';
+import 'package:flutter_clean_arch_riverpod/data/data_sources/crypto_quotes_remote_datasource.dart';
 import 'package:flutter_clean_arch_riverpod/infrastructure/api_client/models/response.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
@@ -8,7 +8,7 @@ import '../../mocks/mock_api_client.dart';
 
 void main() {
   late MockApiClientInterface mockApiClient;
-  late CryptoQuoteDatasource datasource;
+  late CryptoQuotesRemoteDatasource datasource;
 
   setUpAll(() {
     registerFallbackValue(kFallbackApiRoute);
@@ -16,7 +16,7 @@ void main() {
 
   setUp(() {
     mockApiClient = MockApiClientInterface();
-    datasource = CryptoQuoteDatasource(apiClient: mockApiClient);
+    datasource = CryptoQuotesRemoteDatasource(apiClient: mockApiClient);
   });
 
   ApiResponse<dynamic> responseWith(dynamic data) =>
@@ -98,10 +98,7 @@ void main() {
         ),
       ).thenAnswer((_) async => responseWith('resposta inválida'));
 
-      expect(
-        () => datasource.getQuote('BTCUSDT'),
-        throwsA(isA<TypeError>()),
-      );
+      expect(() => datasource.getQuote('BTCUSDT'), throwsA(isA<TypeError>()));
     });
   });
 }

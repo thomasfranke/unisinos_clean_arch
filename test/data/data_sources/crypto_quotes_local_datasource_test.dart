@@ -1,20 +1,20 @@
 import 'dart:convert';
 
 import 'package:flutter_clean_arch_riverpod/data/data_objects/crypto_quote_dto.dart';
-import 'package:flutter_clean_arch_riverpod/data/data_sources/crypto_quotes_cache_datasource.dart';
+import 'package:flutter_clean_arch_riverpod/data/data_sources/crypto_quotes_local_datasource.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
-import '../../mocks/mock_crypto_quotes_datasource.dart';
+import '../../mocks/mock_crypto_quotes_remote_datasource.dart';
 import '../../mocks/mock_storage.dart';
 
 void main() {
   late MockStorageInterface mockStorage;
-  late CryptoQuotesCacheDatasource datasource;
+  late CryptoQuotesLocalDatasource datasource;
 
   setUp(() {
     mockStorage = MockStorageInterface();
-    datasource = CryptoQuotesCacheDatasource(storage: mockStorage);
+    datasource = CryptoQuotesLocalDatasource(storage: mockStorage);
   });
 
   group('CryptoQuotesCacheDatasource.getQuotes', () {

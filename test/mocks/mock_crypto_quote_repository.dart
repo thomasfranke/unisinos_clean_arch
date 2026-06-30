@@ -4,7 +4,7 @@ import 'package:mocktail/mocktail.dart';
 
 class MockCryptoQuoteRepository extends Mock implements CryptoQuoteRepository {}
 
-/// Quotes fixas para uso nos testes.
+/// A list of sample [CryptoQuoteEntity] objects for testing purposes.
 final List<CryptoQuoteEntity> tQuotes = <CryptoQuoteEntity>[
   const CryptoQuoteEntity(
     symbol: 'BTCUSDT',

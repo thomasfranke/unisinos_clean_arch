@@ -6,9 +6,9 @@ import 'package:flutter_clean_arch_riverpod/infrastructure/api_client/models/htt
 import 'package:flutter_clean_arch_riverpod/infrastructure/api_client/models/response.dart';
 
 /// Data source for fetching cryptocurrency quotes from an API.
-class CryptoQuoteDatasource {
-  /// Creates a [CryptoQuoteDatasource] with the given [apiClient].
-  const CryptoQuoteDatasource({required this.apiClient});
+class CryptoQuotesRemoteDatasource {
+  /// Creates a [CryptoQuotesRemoteDatasource] with the given [apiClient].
+  const CryptoQuotesRemoteDatasource({required this.apiClient});
 
   /// API client used to make requests to the cryptocurrency API.
   final ApiClientInterface apiClient;

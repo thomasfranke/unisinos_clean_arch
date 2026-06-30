@@ -7,9 +7,9 @@ import 'package:flutter_clean_arch_riverpod/infrastructure/storage/storage_inter
 const String _cacheKey = 'cache_crypto_quotes';
 
 /// Local cache datasource for cryptocurrency quotes using [StorageInterface].
-class CryptoQuotesCacheDatasource {
-  /// Creates a [CryptoQuotesCacheDatasource] with the given [storage].
-  const CryptoQuotesCacheDatasource({required this.storage});
+class CryptoQuotesLocalDatasource {
+  /// Creates a [CryptoQuotesLocalDatasource] with the given [storage].
+  const CryptoQuotesLocalDatasource({required this.storage});
 
   /// Storage interface used to persist and retrieve cached cryptocurrency
   /// quotes.

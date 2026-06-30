@@ -1,10 +1,11 @@
 import 'package:flutter_clean_arch_riverpod/data/data_objects/crypto_quote_dto.dart';
-import 'package:flutter_clean_arch_riverpod/data/data_sources/crypto_quotes_datasource.dart';
+import 'package:flutter_clean_arch_riverpod/data/data_sources/crypto_quotes_remote_datasource.dart';
 import 'package:mocktail/mocktail.dart';
 
-class MockCryptoQuoteDatasource extends Mock implements CryptoQuoteDatasource {}
+class MockCryptoQuotesRemoteDatasource extends Mock
+    implements CryptoQuotesRemoteDatasource {}
 
-/// DTOs fixos para uso nos testes.
+/// A list of sample [CryptoQuoteDTO] objects for testing purposes.
 final List<CryptoQuoteDTO> tDTOs = <CryptoQuoteDTO>[
   const CryptoQuoteDTO(
     symbol: 'BTCUSDT',

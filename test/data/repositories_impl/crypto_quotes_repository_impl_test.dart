@@ -5,20 +5,20 @@ import 'package:flutter_clean_arch_riverpod/domain/entities/quote_result.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
-import '../../mocks/mock_crypto_quotes_cache_datasource.dart';
-import '../../mocks/mock_crypto_quotes_datasource.dart';
+import '../../mocks/mock_crypto_quotes_local_datasource.dart';
+import '../../mocks/mock_crypto_quotes_remote_datasource.dart';
 
 void main() {
-  late MockCryptoQuoteDatasource mockDatasource;
-  late MockCryptoQuotesCacheDatasource mockCacheDatasource;
+  late MockCryptoQuotesRemoteDatasource mockRemoteDatasource;
+  late MockCryptoQuotesLocalDatasource mockLocalDatasource;
   late CryptoQuotesRepositoryImpl repository;
 
   setUp(() {
-    mockDatasource = MockCryptoQuoteDatasource();
-    mockCacheDatasource = MockCryptoQuotesCacheDatasource();
+    mockRemoteDatasource = MockCryptoQuotesRemoteDatasource();
+    mockLocalDatasource = MockCryptoQuotesLocalDatasource();
     repository = CryptoQuotesRepositoryImpl(
-      datasource: mockDatasource,
-      cacheDatasource: mockCacheDatasource,
+      remoteDatasource: mockRemoteDatasource,
+      localDatasource: mockLocalDatasource,
     );
   });
 
@@ -26,9 +26,11 @@ void main() {
     test(
       'retorna quotes da rede e salva no cache quando bem-sucedido',
       () async {
-        when(() => mockDatasource.getQuotes()).thenAnswer((_) async => tDTOs);
         when(
-          () => mockCacheDatasource.saveQuotes(tDTOs),
+          () => mockRemoteDatasource.getQuotes(),
+        ).thenAnswer((_) async => tDTOs);
+        when(
+          () => mockLocalDatasource.saveQuotes(tDTOs),
         ).thenAnswer((_) async {});
 
         final QuoteResult result = await repository.getQuotes();
@@ -36,15 +38,17 @@ void main() {
         expect(result.fromCache, isFalse);
         expect(result.quotes, hasLength(tDTOs.length));
         expect(result.quotes.first.symbol, equals('BTCUSDT'));
-        verify(() => mockDatasource.getQuotes()).called(1);
-        verify(() => mockCacheDatasource.saveQuotes(tDTOs)).called(1);
+        verify(() => mockRemoteDatasource.getQuotes()).called(1);
+        verify(() => mockLocalDatasource.saveQuotes(tDTOs)).called(1);
       },
     );
 
     test('converte DTOs em entidades corretamente', () async {
-      when(() => mockDatasource.getQuotes()).thenAnswer((_) async => tDTOs);
       when(
-        () => mockCacheDatasource.saveQuotes(any()),
+        () => mockRemoteDatasource.getQuotes(),
+      ).thenAnswer((_) async => tDTOs);
+      when(
+        () => mockLocalDatasource.saveQuotes(any()),
       ).thenAnswer((_) async {});
 
       final QuoteResult result = await repository.getQuotes();
@@ -59,23 +63,27 @@ void main() {
     });
 
     test('retorna quotes do cache quando datasource remoto falha', () async {
-      when(() => mockDatasource.getQuotes()).thenThrow(Exception('sem rede'));
-      when(() => mockCacheDatasource.getQuotes()).thenReturn(tDTOs);
+      when(
+        () => mockRemoteDatasource.getQuotes(),
+      ).thenThrow(Exception('sem rede'));
+      when(() => mockLocalDatasource.getQuotes()).thenReturn(tDTOs);
 
       final QuoteResult result = await repository.getQuotes();
 
       expect(result.fromCache, isTrue);
       expect(result.quotes, hasLength(tDTOs.length));
-      verify(() => mockCacheDatasource.getQuotes()).called(1);
-      verifyNever(() => mockCacheDatasource.saveQuotes(any()));
+      verify(() => mockLocalDatasource.getQuotes()).called(1);
+      verifyNever(() => mockLocalDatasource.saveQuotes(any()));
     });
 
     test(
       'propaga exceção quando datasource remoto falha e cache está vazio',
       () async {
-        when(() => mockDatasource.getQuotes()).thenThrow(Exception('sem rede'));
         when(
-          () => mockCacheDatasource.getQuotes(),
+          () => mockRemoteDatasource.getQuotes(),
+        ).thenThrow(Exception('sem rede'));
+        when(
+          () => mockLocalDatasource.getQuotes(),
         ).thenReturn(<CryptoQuoteDTO>[]);
 
         expect(() => repository.getQuotes(), throwsException);
@@ -89,19 +97,19 @@ void main() {
 
     test('retorna entidade corretamente para o símbolo solicitado', () async {
       when(
-        () => mockDatasource.getQuote(tSymbol),
+        () => mockRemoteDatasource.getQuote(tSymbol),
       ).thenAnswer((_) async => tDto);
 
       final CryptoQuoteEntity result = await repository.getQuote(tSymbol);
 
       expect(result.symbol, equals('BTCUSDT'));
       expect(result.lastPrice, equals(50000.0));
-      verify(() => mockDatasource.getQuote(tSymbol)).called(1);
+      verify(() => mockRemoteDatasource.getQuote(tSymbol)).called(1);
     });
 
     test('propaga exceção quando datasource lança erro', () async {
       when(
-        () => mockDatasource.getQuote(tSymbol),
+        () => mockRemoteDatasource.getQuote(tSymbol),
       ).thenThrow(Exception('símbolo inválido'));
 
       expect(() => repository.getQuote(tSymbol), throwsException);
